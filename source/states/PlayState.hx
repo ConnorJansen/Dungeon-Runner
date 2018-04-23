@@ -4,7 +4,6 @@ package states;
 import flixel.FlxCamera.FlxCameraFollowStyle;
 import flixel.FlxG;
 import flixel.FlxState;
-import flixel.group.FlxGroup.FlxTypedGroup;
 import player.Player;
 
 class PlayState extends FlxState

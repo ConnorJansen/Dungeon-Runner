@@ -26,7 +26,7 @@ class ApplicationMain {
 	
 	public static function main () {
 		
-		flash.Lib.setPackage ("Conor", "DungeonRunner", "com.example.myapp", "0.0.1");
+		flash.Lib.setPackage ("Conor", "Dungeon-Runner", "com.example.myapp", "0.0.1");
 		
 		
 		#if ios
@@ -40,7 +40,7 @@ class ApplicationMain {
 		telemetryConfig = new hxtelemetry.HxTelemetry.Config ();
 		telemetryConfig.allocations = true;
 		telemetryConfig.host = "localhost";
-		telemetryConfig.app_name = "Dungeon_Runner";
+		telemetryConfig.app_name = "Dungeon-Runner";
 		#end
 		
 		
@@ -141,7 +141,7 @@ class ApplicationMain {
 			(false ? flash.Lib.FULLSCREEN : 0) |
 			(0 == 4 ? flash.Lib.HW_AA_HIRES : 0) |
 			(0 == 2 ? flash.Lib.HW_AA : 0),
-			"Dungeon_Runner",
+			"Dungeon-Runner",
 			null
 			#if mobile, ScaledStage #end
 		);
@@ -318,14 +318,14 @@ class ApplicationMain {
 	public static function main () {
 		
 		#if openfl
-		flash.Lib.setPackage ("Conor", "DungeonRunner", "com.example.myapp", "0.0.1");
+		flash.Lib.setPackage ("Conor", "Dungeon-Runner", "com.example.myapp", "0.0.1");
 		
 		#end
 		
 		wx.App.boot (function () {
 			
 			
-			frame = wx.Frame.create (null, null, "Dungeon_Runner", null, { width: 640, height: 480 });
+			frame = wx.Frame.create (null, null, "Dungeon-Runner", null, { width: 640, height: 480 });
 			
 			
 			#if openfl
@@ -515,11 +515,11 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "9",
+			build: "12",
 			company: "Conor",
-			file: "DungeonRunner",
+			file: "Dungeon-Runner",
 			fps: 60,
-			name: "Dungeon_Runner",
+			name: "Dungeon-Runner",
 			orientation: "landscape",
 			packageName: "com.example.myapp",
 			version: "0.0.1",
@@ -537,7 +537,7 @@ class ApplicationMain {
 					parameters: "{}",
 					resizable: true,
 					stencilBuffer: false,
-					title: "Dungeon_Runner",
+					title: "Dungeon-Runner",
 					vsync: true,
 					width: 640,
 					x: null,

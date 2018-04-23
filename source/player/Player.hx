@@ -4,7 +4,12 @@ import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.system.FlxAssets.FlxGraphicAsset;
 import haxe.ds.Vector;
-
+import player.fsm.PlayerState;
+import player.fsm.PlayerStates;
+import player.fsm.State;
+import player.fsm.states.AttackState;
+import player.fsm.states.DeathState;
+import player.fsm.states.StandState;
 
 class Player extends FlxSprite
 {
