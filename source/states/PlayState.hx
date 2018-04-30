@@ -8,13 +8,16 @@ import player.Player;
 
 class PlayState extends FlxState
 {
-	private var player:Player;
+	private var _player:Player;
 	
 	
 	override public function create():Void
 	{
-		FlxG.camera.follow(player, FlxCameraFollowStyle.PLATFORMER, 1);
-		FlxG.camera.zoom = 2;
+		
+		 _player = new Player(20, 20);
+		add(_player);
+		//FlxG.camera.follow(player, FlxCameraFollowStyle.PLATFORMER, 1);
+		//FlxG.camera.zoom = 2;
 		
 		
 		super.create();
