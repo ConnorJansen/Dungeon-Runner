@@ -18,10 +18,18 @@ class AssetData {
 			
 			path.set ("assets/data/data-goes-here.txt", "assets/data/data-goes-here.txt");
 			type.set ("assets/data/data-goes-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/data/d_r_project.oep", "assets/data/d_r_project.oep");
+			type.set ("assets/data/d_r_project.oep", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/data/level001.oel", "assets/data/level001.oel");
+			type.set ("assets/data/level001.oel", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
 			type.set ("assets/images/images-go-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/images/Knight.png", "assets/images/Knight.png");
 			type.set ("assets/images/Knight.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/Knightv02.png", "assets/images/Knightv02.png");
+			type.set ("assets/images/Knightv02.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/tiles_basic.png", "assets/images/tiles_basic.png");
+			type.set ("assets/images/tiles_basic.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 			type.set ("assets/music/music-goes-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/sounds/sounds-go-here.txt", "assets/sounds/sounds-go-here.txt");
