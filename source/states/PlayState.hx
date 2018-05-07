@@ -26,6 +26,9 @@ class PlayState extends FlxState
 		_mWalls.setTileProperties(1, FlxObject.NONE);
 		_mWalls.setTileProperties(2, FlxObject.ANY);
 		add(_mWalls);
+		
+		_grpKeys = new FlxTypedGroup<Keys>();
+		add(_grpKeys);
 		_player = new Player();
 		_map.loadEntities(placeEntities, "Entities");
 		 
@@ -47,11 +50,25 @@ class PlayState extends FlxState
 			_player.x = x;
 			_player.y = y;
 		}
+		
+		else if (entityName == "red_keys")
+		{
+			_grpKeys.add(new Keys(x + 4, y + 4));
+		}
+	}
+	
+	function playerTouchKey(P:Player, K:Keys):Void
+	{
+		if (P.alive && P.exists && K.alive && K.exists)
+			{
+				K.kill();
+			}
 	}
 
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
 		FlxG.collide(_player, _mWalls);
+		FlxG.overlap(_player, _grpKeys, playerTouchKey);
 	}
 }
