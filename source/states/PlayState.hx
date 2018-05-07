@@ -17,6 +17,7 @@ class PlayState extends FlxState
 	var _map:FlxOgmoLoader;
 	var _mWalls:FlxTilemap;
 	var _grpKeys:FlxTypedGroup<Keys>;
+	var _grpTraps:FlxTypedGroup<Trap>;
 	
 	override public function create():Void
 	{
@@ -29,6 +30,8 @@ class PlayState extends FlxState
 		
 		_grpKeys = new FlxTypedGroup<Keys>();
 		add(_grpKeys);
+		_grpTraps = new FlxTypedGroup<Trap>();
+		add(_grpTraps);
 		_player = new Player();
 		_map.loadEntities(placeEntities, "Entities");
 		 
@@ -54,6 +57,10 @@ class PlayState extends FlxState
 		else if (entityName == "red_keys")
 		{
 			_grpKeys.add(new Keys(x + 4, y + 4));
+		}
+		else if (entityName == "trap")
+		{
+			_grpTraps.add(new Trap(x + 4, y, Std.parseInt(entityData.get("tType"))));
 		}
 	}
 	
