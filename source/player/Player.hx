@@ -20,6 +20,9 @@ class Player extends FlxSprite
 	
 	
 	public var speed:Float = 200;
+	public var hasRedKey:Bool = false;
+	public var hasGreenKey:Bool = false;
+	public var hasYellowKey:Bool = false;
 	
 	
 	
@@ -37,6 +40,25 @@ class Player extends FlxSprite
 		
 	}
 	
+	public function giveKey(KType:FlxColor)
+	{
+		switch KType {
+			case RED: hasRedKey = true;
+			case YELLOW: hasYellowKey = true;
+			case GREEN: hasGreenKey = true;
+		}
+	}
+	
+	public function hasKey(KType:FlxColor)
+	{
+		var hasKey:Bool = false;
+		switch KType {
+			case RED: hasKey = hasRedKey;
+			case YELLOW: hasKey = hasYellowKey;
+			case GREEN: hasKey = hasGreenKey;
+		}
+		return hasKey;
+	}
 	
 	private function movement():Void
 	{

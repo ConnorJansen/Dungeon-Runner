@@ -1,22 +1,26 @@
 package;
 
 import flixel.FlxSprite;
-import flixel.group.FlxGroup.FlxTypedGroup;
-import flixel.system.FlxAssets.FlxGraphicAsset;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 
 
-class Keys extends FlxSprite 
+class Door extends FlxSprite 
 {
 
+	public var dType(default, null):FlxColor;
 	
-	
-	public function new(?X:Float=0, ?Y:Float=0) 
+	public function new(?X:Float=0, ?Y:Float=0, DType:FlxColor) 
 	{
 		super(X, Y);
-		loadGraphic(AssetPaths.key_red__png, false, 8, 8);
+		dType = DType;
+		loadGraphic(AssetPaths.door_blank__png, true, 16, 16);
+		width = 16;
+		height = 16;
+		
+		color = dType;
+		immovable = true;
 		
 	}
 	
@@ -30,4 +34,5 @@ class Keys extends FlxSprite
 	{
 		exists = false;
 	}
+	
 }

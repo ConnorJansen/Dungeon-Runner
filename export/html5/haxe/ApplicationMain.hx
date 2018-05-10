@@ -34,11 +34,67 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/data/d_r_project.oep");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/data/level001.oel");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/images/door_blank.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/door_green.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/door_RED.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/door_yellow.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/images-go-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/images/key_blank.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/key_green.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/key_red.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/key_yellow.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/Knight.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Knightv02.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/tiles_basic.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/trap_0.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/trap_1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -135,11 +191,11 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "1",
+			build: "77",
 			company: "Conor",
-			file: "DungeonRunner",
+			file: "Dungeon-Runner",
 			fps: 60,
-			name: "Dungeon_Runner",
+			name: "Dungeon-Runner",
 			orientation: "",
 			packageName: "com.example.myapp",
 			version: "0.0.1",
@@ -157,7 +213,7 @@ class ApplicationMain {
 					parameters: "{}",
 					resizable: false,
 					stencilBuffer: true,
-					title: "Dungeon_Runner",
+					title: "Dungeon-Runner",
 					vsync: true,
 					width: 640,
 					x: null,
