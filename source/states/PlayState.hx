@@ -114,7 +114,9 @@ class PlayState extends FlxState
 		super.update(elapsed);
 		if (_ending)
 		{
-			Sys.sleep(.5);
+			#if !html5 
+				Sys.sleep(.5);
+			#end
 			FlxG.switchState(new GameOverState(false));
 		}
 		
