@@ -72,6 +72,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -109,6 +110,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/images/Knight.png", AssetType.IMAGE);
 		className.set ("assets/images/Knightv02.png", __ASSET__assets_images_knightv02_png);
 		type.set ("assets/images/Knightv02.png", AssetType.IMAGE);
+		className.set ("assets/images/screen_shot.PNG", __ASSET__assets_images_screen_shot_png);
+		type.set ("assets/images/screen_shot.PNG", AssetType.IMAGE);
 		className.set ("assets/images/tiles_basic.png", __ASSET__assets_images_tiles_basic_png);
 		type.set ("assets/images/tiles_basic.png", AssetType.IMAGE);
 		className.set ("assets/images/trap_0.png", __ASSET__assets_images_trap_0_png);
@@ -189,6 +192,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/Knightv02.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/screen_shot.PNG";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -295,6 +302,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/images/Knightv02.png", __ASSET__assets_images_knightv02_png);
 		type.set ("assets/images/Knightv02.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/screen_shot.PNG", __ASSET__assets_images_screen_shot_png);
+		type.set ("assets/images/screen_shot.PNG", AssetType.IMAGE);
 		
 		className.set ("assets/images/tiles_basic.png", __ASSET__assets_images_tiles_basic_png);
 		type.set ("assets/images/tiles_basic.png", AssetType.IMAGE);
@@ -987,6 +997,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__assets_images_key_yellow_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_knight_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_knightv02_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_screen_shot_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_tiles_basic_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_trap_0_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_trap_1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1001,6 +1012,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
 
 
 
@@ -1050,6 +1062,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/images/key_yellow.png") #if display private #end class __ASSET__assets_images_key_yellow_png extends lime.graphics.Image {}
 @:image("assets/images/Knight.png") #if display private #end class __ASSET__assets_images_knight_png extends lime.graphics.Image {}
 @:image("assets/images/Knightv02.png") #if display private #end class __ASSET__assets_images_knightv02_png extends lime.graphics.Image {}
+@:image("assets/images/screen_shot.PNG") #if display private #end class __ASSET__assets_images_screen_shot_png extends lime.graphics.Image {}
 @:image("assets/images/tiles_basic.png") #if display private #end class __ASSET__assets_images_tiles_basic_png extends lime.graphics.Image {}
 @:image("assets/images/trap_0.png") #if display private #end class __ASSET__assets_images_trap_0_png extends lime.graphics.Image {}
 @:image("assets/images/trap_1.png") #if display private #end class __ASSET__assets_images_trap_1_png extends lime.graphics.Image {}

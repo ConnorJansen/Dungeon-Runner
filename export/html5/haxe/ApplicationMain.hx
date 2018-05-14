@@ -86,6 +86,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/screen_shot.PNG");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/tiles_basic.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -191,7 +195,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "145",
+			build: "148",
 			company: "Conor",
 			file: "Dungeon-Runner",
 			fps: 60,
