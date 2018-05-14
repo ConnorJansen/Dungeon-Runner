@@ -52,6 +52,8 @@ ApplicationMain.create = function() {
 	types.push("IMAGE");
 	urls.push("assets/images/Knightv02.png");
 	types.push("IMAGE");
+	urls.push("assets/images/screen_shot.PNG");
+	types.push("IMAGE");
 	urls.push("assets/images/tiles_basic.png");
 	types.push("IMAGE");
 	urls.push("assets/images/trap_0.png");
@@ -102,7 +104,7 @@ ApplicationMain.init = function() {
 	}
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "138", company : "Conor", file : "Dungeon-Runner", fps : 60, name : "Dungeon-Runner", orientation : "", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 480, parameters : "{}", resizable : false, stencilBuffer : true, title : "Dungeon-Runner", vsync : true, width : 640, x : null, y : null}]};
+	ApplicationMain.config = { build : "148", company : "Conor", file : "Dungeon-Runner", fps : 60, name : "Dungeon-Runner", orientation : "", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 480, parameters : "{}", resizable : false, stencilBuffer : true, title : "Dungeon-Runner", vsync : true, width : 640, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -2454,7 +2456,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this27.h[id] = value13;
 	}
-	id = "assets/images/tiles_basic.png";
+	id = "assets/images/screen_shot.PNG";
 	var _this28 = this.path;
 	if(__map_reserved[id] != null) {
 		_this28.setReserved(id,id);
@@ -2468,7 +2470,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this29.h[id] = value14;
 	}
-	id = "assets/images/trap_0.png";
+	id = "assets/images/tiles_basic.png";
 	var _this30 = this.path;
 	if(__map_reserved[id] != null) {
 		_this30.setReserved(id,id);
@@ -2482,7 +2484,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this31.h[id] = value15;
 	}
-	id = "assets/images/trap_1.png";
+	id = "assets/images/trap_0.png";
 	var _this32 = this.path;
 	if(__map_reserved[id] != null) {
 		_this32.setReserved(id,id);
@@ -2496,7 +2498,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this33.h[id] = value16;
 	}
-	id = "assets/music/music-goes-here.txt";
+	id = "assets/images/trap_1.png";
 	var _this34 = this.path;
 	if(__map_reserved[id] != null) {
 		_this34.setReserved(id,id);
@@ -2504,13 +2506,13 @@ var DefaultAssetLibrary = function() {
 		_this34.h[id] = id;
 	}
 	var _this35 = this.type;
-	var value17 = "TEXT";
+	var value17 = "IMAGE";
 	if(__map_reserved[id] != null) {
 		_this35.setReserved(id,value17);
 	} else {
 		_this35.h[id] = value17;
 	}
-	id = "assets/sounds/sounds-go-here.txt";
+	id = "assets/music/music-goes-here.txt";
 	var _this36 = this.path;
 	if(__map_reserved[id] != null) {
 		_this36.setReserved(id,id);
@@ -2524,7 +2526,7 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this37.h[id] = value18;
 	}
-	id = "flixel/sounds/beep.ogg";
+	id = "assets/sounds/sounds-go-here.txt";
 	var _this38 = this.path;
 	if(__map_reserved[id] != null) {
 		_this38.setReserved(id,id);
@@ -2532,13 +2534,13 @@ var DefaultAssetLibrary = function() {
 		_this38.h[id] = id;
 	}
 	var _this39 = this.type;
-	var value19 = "SOUND";
+	var value19 = "TEXT";
 	if(__map_reserved[id] != null) {
 		_this39.setReserved(id,value19);
 	} else {
 		_this39.h[id] = value19;
 	}
-	id = "flixel/sounds/flixel.ogg";
+	id = "flixel/sounds/beep.ogg";
 	var _this40 = this.path;
 	if(__map_reserved[id] != null) {
 		_this40.setReserved(id,id);
@@ -2552,51 +2554,51 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this41.h[id] = value20;
 	}
-	id = "flixel/fonts/nokiafc22.ttf";
-	var _this42 = this.className;
-	var value21 = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
+	id = "flixel/sounds/flixel.ogg";
+	var _this42 = this.path;
 	if(__map_reserved[id] != null) {
-		_this42.setReserved(id,value21);
+		_this42.setReserved(id,id);
 	} else {
-		_this42.h[id] = value21;
+		_this42.h[id] = id;
 	}
 	var _this43 = this.type;
-	var value22 = "FONT";
+	var value21 = "SOUND";
 	if(__map_reserved[id] != null) {
-		_this43.setReserved(id,value22);
+		_this43.setReserved(id,value21);
 	} else {
-		_this43.h[id] = value22;
+		_this43.h[id] = value21;
 	}
-	id = "flixel/fonts/monsterrat.ttf";
+	id = "flixel/fonts/nokiafc22.ttf";
 	var _this44 = this.className;
-	var value23 = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
+	var value22 = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
 	if(__map_reserved[id] != null) {
-		_this44.setReserved(id,value23);
+		_this44.setReserved(id,value22);
 	} else {
-		_this44.h[id] = value23;
+		_this44.h[id] = value22;
 	}
 	var _this45 = this.type;
-	var value24 = "FONT";
+	var value23 = "FONT";
 	if(__map_reserved[id] != null) {
-		_this45.setReserved(id,value24);
+		_this45.setReserved(id,value23);
 	} else {
-		_this45.h[id] = value24;
+		_this45.h[id] = value23;
 	}
-	id = "flixel/images/ui/button.png";
-	var _this46 = this.path;
+	id = "flixel/fonts/monsterrat.ttf";
+	var _this46 = this.className;
+	var value24 = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
 	if(__map_reserved[id] != null) {
-		_this46.setReserved(id,id);
+		_this46.setReserved(id,value24);
 	} else {
-		_this46.h[id] = id;
+		_this46.h[id] = value24;
 	}
 	var _this47 = this.type;
-	var value25 = "IMAGE";
+	var value25 = "FONT";
 	if(__map_reserved[id] != null) {
 		_this47.setReserved(id,value25);
 	} else {
 		_this47.h[id] = value25;
 	}
-	id = "flixel/images/logo/default.png";
+	id = "flixel/images/ui/button.png";
 	var _this48 = this.path;
 	if(__map_reserved[id] != null) {
 		_this48.setReserved(id,id);
@@ -2610,6 +2612,20 @@ var DefaultAssetLibrary = function() {
 	} else {
 		_this49.h[id] = value26;
 	}
+	id = "flixel/images/logo/default.png";
+	var _this50 = this.path;
+	if(__map_reserved[id] != null) {
+		_this50.setReserved(id,id);
+	} else {
+		_this50.h[id] = id;
+	}
+	var _this51 = this.type;
+	var value27 = "IMAGE";
+	if(__map_reserved[id] != null) {
+		_this51.setReserved(id,value27);
+	} else {
+		_this51.h[id] = value27;
+	}
 	var assetsPrefix = null;
 	if(ApplicationMain.config != null && Object.prototype.hasOwnProperty.call(ApplicationMain.config,"assetsPrefix")) {
 		assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -2619,13 +2635,13 @@ var DefaultAssetLibrary = function() {
 		while(k.hasNext()) {
 			var k1 = k.next();
 			var this1 = this.path;
-			var _this50 = this.path;
-			var value27 = assetsPrefix + (__map_reserved[k1] != null ? _this50.getReserved(k1) : _this50.h[k1]);
-			var _this51 = this1;
+			var _this52 = this.path;
+			var value28 = assetsPrefix + (__map_reserved[k1] != null ? _this52.getReserved(k1) : _this52.h[k1]);
+			var _this53 = this1;
 			if(__map_reserved[k1] != null) {
-				_this51.setReserved(k1,value27);
+				_this53.setReserved(k1,value28);
 			} else {
-				_this51.h[k1] = value27;
+				_this53.h[k1] = value28;
 			}
 		}
 	}
@@ -84471,9 +84487,16 @@ states_GameOverState.__super__ = flixel_FlxState;
 states_GameOverState.prototype = $extend(flixel_FlxState.prototype,{
 	_txtMessage: null
 	,_btnMainMenu: null
+	,_btnRestart: null
 	,_win: null
 	,goMainMenu: function() {
 		var nextState = new states_MenuState();
+		if(flixel_FlxG.game._state.switchTo(nextState)) {
+			flixel_FlxG.game._requestedState = nextState;
+		}
+	}
+	,restartLevel: function() {
+		var nextState = new states_PlayState();
 		if(flixel_FlxG.game._state.switchTo(nextState)) {
 			flixel_FlxG.game._requestedState = nextState;
 		}
@@ -84486,6 +84509,9 @@ states_GameOverState.prototype = $extend(flixel_FlxState.prototype,{
 		this._btnMainMenu = new flixel_ui_FlxButton(0,flixel_FlxG.height - 32,"Main Menu",$bind(this,this.goMainMenu));
 		this._btnMainMenu.screenCenter(flixel_util_FlxAxes.X);
 		this.add(this._btnMainMenu);
+		this._btnRestart = new flixel_ui_FlxButton(0,flixel_FlxG.height - 12,"Restart",$bind(this,this.restartLevel));
+		this._btnRestart.screenCenter();
+		this.add(this._btnRestart);
 		flixel_FlxState.prototype.create.call(this);
 	}
 	,__class__: states_GameOverState
@@ -84697,6 +84723,7 @@ AssetPaths.key_red__png = "assets/images/key_red.png";
 AssetPaths.key_yellow__png = "assets/images/key_yellow.png";
 AssetPaths.Knight__png = "assets/images/Knight.png";
 AssetPaths.Knightv02__png = "assets/images/Knightv02.png";
+AssetPaths.screen_shot__PNG = "assets/images/screen_shot.PNG";
 AssetPaths.tiles_basic__png = "assets/images/tiles_basic.png";
 AssetPaths.trap_0__png = "assets/images/trap_0.png";
 AssetPaths.trap_1__png = "assets/images/trap_1.png";
