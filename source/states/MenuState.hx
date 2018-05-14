@@ -16,7 +16,7 @@ class MenuState extends FlxState
 	
 	override public function create():Void
 	{
-		_txtTitle = new FlxText(20, 0, 0, "Dingeon\nRunner", 22);
+		_txtTitle = new FlxText(20, 0, 0, "Dungeon\nRunner", 22);
 		_txtTitle.alignment = CENTER;
 		_txtTitle.screenCenter(X);
 		add(_txtTitle);
