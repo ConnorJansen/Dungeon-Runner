@@ -11,12 +11,23 @@ class MenuState extends FlxState
 {
 
 	private var _btnPlay:FlxButton;
+	private var _txtTitle:FlxText;
+	private var _btnControls:FlxButton;
 	
 	override public function create():Void
 	{
+		_txtTitle = new FlxText(20, 0, 0, "Dingeon\nRunner", 22);
+		_txtTitle.alignment = CENTER;
+		_txtTitle.screenCenter(X);
+		add(_txtTitle);
 		_btnPlay = new FlxButton(0, 0, "Play", clickPlay);
 		_btnPlay.screenCenter();
 		add(_btnPlay);
+		
+		_btnControls = new FlxButton(0, 0, "Controls", showControls);
+		_btnControls.screenCenter(X);
+		_btnControls.y = _btnPlay.y + 20;
+		add(_btnControls);
 		
 		super.create();
 	}
@@ -27,6 +38,10 @@ class MenuState extends FlxState
      FlxG.switchState(new PlayState());
 	}
 	
+	private function showControls():Void
+	{
+		FlxG.switchState(new ControlState());
+	}
 
 	override public function update(elapsed:Float):Void
 	{

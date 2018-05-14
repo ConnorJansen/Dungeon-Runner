@@ -14,6 +14,8 @@ class Trap extends FlxSprite
 		loadGraphic("assets/images/trap_" + tType + ".png", true, 16, 16);
 		width = 16;
 		height = 16;
+		visible = false;
+		immovable = true;
 	}
 	
 }

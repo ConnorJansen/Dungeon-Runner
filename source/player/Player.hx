@@ -10,9 +10,7 @@ import haxe.ds.Vector;
 import player.fsm.PlayerState;
 import player.fsm.PlayerStates;
 import player.fsm.State;
-import player.fsm.states.AttackState;
-import player.fsm.states.DeathState;
-import player.fsm.states.StandState;
+
 
 class Player extends FlxSprite
 {
@@ -23,7 +21,7 @@ class Player extends FlxSprite
 	public var hasRedKey:Bool = false;
 	public var hasGreenKey:Bool = false;
 	public var hasYellowKey:Bool = false;
-	
+	public var mobile:Bool = true;
 	
 	
 	
@@ -67,10 +65,12 @@ class Player extends FlxSprite
 		var _left:Bool = false;
 		var _right:Bool = false;
 		
+		
 		_up = FlxG.keys.anyPressed([UP, W]);
 		_down = FlxG.keys.anyPressed([DOWN, S]);
 		_left = FlxG.keys.anyPressed([LEFT, A]);
 		_right = FlxG.keys.anyPressed([RIGHT, D]);
+		
 		
 		if (_up && _down)
 			_up = _down = false;

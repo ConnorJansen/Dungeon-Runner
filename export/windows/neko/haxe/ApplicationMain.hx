@@ -515,7 +515,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "88",
+			build: "134",
 			company: "Conor",
 			file: "Dungeon-Runner",
 			fps: 60,

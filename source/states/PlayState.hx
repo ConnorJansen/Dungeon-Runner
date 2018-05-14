@@ -19,7 +19,11 @@ class PlayState extends FlxState
 	var _mWalls:FlxTilemap;
 	var _grpKeys:FlxTypedGroup<Key>;
 	var _grpTraps:FlxTypedGroup<Trap>;
+	var _grpGoal:FlxTypedGroup<Goal>;
 	var _grpDoors:FlxTypedGroup<Door>;
+	var _ending:Bool;
+	var _won:Bool;
+	
 	
 	override public function create():Void
 	{
@@ -36,6 +40,8 @@ class PlayState extends FlxState
 		add(_grpTraps);
 		_grpDoors = new FlxTypedGroup<Door>();
 		add(_grpDoors);
+		_grpGoal = new FlxTypedGroup<Goal>();
+		add(_grpGoal);
 		_player = new Player();
 		_map.loadEntities(placeEntities, "Entities");
 		 
@@ -68,6 +74,10 @@ class PlayState extends FlxState
 		{
 			_grpDoors.add(new Door(x, y, FlxColor.fromString(entityData.get("dType"))));
 		}
+		else if (entityName == "goal")
+		{
+			_grpGoal.add(new Goal(x, y));
+		}
 	}
 	
 	function playerTouchKey(P:Player, K:Key):Void
@@ -87,13 +97,44 @@ class PlayState extends FlxState
 			}
 	}
 	
+	function playerTouchTrap(P:Player, T:Trap):Void
+	{
+		T.visible = true;
+		_ending = true;
+	}
 	
+	
+	function playerTouchGoal(P:Player, G:Goal):Void
+	{
+		_won = true;
+	}
 
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
+		if (_ending)
+		{
+			Sys.sleep(.5);
+			FlxG.switchState(new GameOverState(false));
+		}
+		
+		if (_won)
+		{
+			FlxG.switchState(new GameOverState(true));
+		}
+		
+		
 		FlxG.collide(_mWalls, _player);
 		FlxG.collide(_player, _grpDoors, playerTouchDoor);
 		FlxG.overlap(_player, _grpKeys, playerTouchKey);
-	}
+		FlxG.overlap(_player, _grpGoal, playerTouchGoal);
+		FlxG.collide(_player, _grpTraps, playerTouchTrap);
+		/*if ()
+		{
+			_won = false;
+			_ending = false;
+		} */
+		
+		
+	}	
 }
